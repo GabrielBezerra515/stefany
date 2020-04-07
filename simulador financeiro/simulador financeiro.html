@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simulador Financeiro MIT</title>
+    <link rel="stylesheet" href="simuladorCSS.css">
+  </head>
+<body>
+    <center>
+      <div class="background"> 
+      <div class="blur"> 
+      <div class="borda"><p> <h2>
+      informe quantas de cada lixeira deseja adquirir<br>
+      Cada lixeira custa R$50.00 por mês</h2> </div>
+      <div class="geral"> 
+      <div style="width: 160px; height: 100px; float: left;"></div>
+      <div class="lixeira01">
+      <img src="vidro1.jpeg" width="200px" height="200px">
+      <input class="input1" type="text" id="lixeira1" placeholder="lixeira de vidro?">
+    </div>
+    <div class="lixeira02">
+      <img src="papel1.jpeg" width="200px" height="200px">
+      <input class="input2" type="text" id="lixeira2" placeholder="lixeira de Papel?">
+    </div>
+    <div class="lixeira03">
+      <img  src="plastico1.jpeg" width="200px" height="200px">
+      <input class="input3" type="text" id="lixeira3" placeholder="lixeira de Plástico?">
+    </div>
+     <div class="lixeira04">
+      <img  src="metal1.jpeg" width="200px" height="200px">
+      <input class="input4" type="text" id="lixeira4" placeholder="lixeira de Metal?"> 
+    </div>
+    <div class="lixeira05">
+      <img  src="organico1.jpeg" width="200px" height="200px"> 
+      <input class="input5" type="text" id="lixeira5" placeholder="lixeira Orgânica?">
+    </div> </div>
+    <br><br><br>
+<div> <div style="width: 250px; height: 1px; float: left;"></div>
+    <div class="texto"> <h4>Por quantos meses deseja alugar o nosso produto? <input type="text" class="input6" id="tempo" placeholder="meses">
+      <br>Alugue por 12 meses ou mais e tenha um <b>Super Desconto!</b></h4>
+      
+      <button class="pronto" onclick="pronto()">Tudo Pronto?</button> 
+    
+     <h4><div id="mit"></div>
+      <div id="total1"></div>
+      <div id="mit2"></div></h4></div>
+    </div> 
+    </div>
+</div>
+    </center>
+
+</body>
+</html>
+<script>
+function pronto(){ 
+mit.innerHTML = '';
+mit2.innerHTML = '';
+total1.innerHTML = '';
+var tempo1 = Number(tempo.value)
+
+if (tempo1 < 12) {
+  var calculo = tempo1 *50
+  var total;
+  var lixeira01 = Number(lixeira1.value)
+  var lixeira02 = Number(lixeira2.value)
+  var lixeira03 = Number(lixeira3.value)
+  var lixeira04 = Number(lixeira4.value)
+  var lixeira05 = Number(lixeira5.value)
+if (lixeira01 > 0){
+  if (lixeira02 == 0){
+    if (lixeira03 == 0){
+      if (lixeira04 == 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira02 + lixeira03 + lixeira04)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira02 + lixeira03 + lixeira04 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 == 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira02 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 == 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira03 + lixeira04)* calculo 
+       }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 == 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira03)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 > 0){
+    if (lixeira03 == 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira04 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira03)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 > 0){
+    if (lixeira03 == 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 > 0){
+    if (lixeira03 == 0){
+      if (lixeira04 == 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 == 0){
+    if (lixeira03 == 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 == 0){
+    if (lixeira03 == 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira04 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 == 0){
+    if (lixeira03 == 0){
+      if (lixeira04 > 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira04)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02== 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira03 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 == 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira05 + lixeira03 + lixeira04)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 == 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira03 + lixeira04)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 == 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira03)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira03 + lixeira04)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira03 + lixeira04 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 > 0){
+    if (lixeira03 == 0){
+      if (lixeira04 > 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira04)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira02 + lixeira03 + lixeira04 + lixeira05)* calculo 
+       }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 == 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira03 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 == 0){
+    if (lixeira03 == 0){
+      if (lixeira04 > 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira04)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 == 0){
+    if (lixeira03 == 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira04 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 == 0){
+    if (lixeira03 == 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 == 0){
+      if (lixeira04 > 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira02 + lixeira04)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira02 + lixeira03)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 == 0){
+      if (lixeira04 == 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira01)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 == 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira03 + lixeira04 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira03 + lixeira02 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira03 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+
+
+
+total1.innerHTML = `O Valor total de sua compra é R$${total.toFixed(2)}<br>
+Compre por 12 meses ou mais e tenha um Desconto especial!` 
+}
+if (tempo1 >= 12) {
+  mit.innerHTML = `Gostaria que a manutenção fosse feita pela MIT? <br><br>
+  <button class="button_sim" onclick="sim()">Sim</button> <button class="button_nao" onclick="não()">Não</button>`
+}
+}
+function sim(){
+  mit.innerHTML = '';
+  mit2.innerHTML = '';  
+  var tempo1 = Number(tempo.value)
+  var calculo = tempo1 *50
+  var total;
+  var lixeira01 = Number(lixeira1.value)
+  var lixeira02 = Number(lixeira2.value)
+  var lixeira03 = Number(lixeira3.value)
+  var lixeira04 = Number(lixeira4.value)
+  var lixeira05 = Number(lixeira5.value)
+  
+  
+  mit2.innerHTML += `Valor mensal da manutenção = R$50.00`
+if (lixeira01 > 0){
+  if (lixeira02 == 0){
+    if (lixeira03 == 0){
+      if (lixeira04 == 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira02 + lixeira03 + lixeira04)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira02 + lixeira03 + lixeira04 + lixeira05)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 == 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira02 + lixeira05)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 == 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira03 + lixeira04)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 == 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira03)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 > 0){
+    if (lixeira03 == 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira04 + lixeira05)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira03)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 > 0){
+    if (lixeira03 == 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira05)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 > 0){
+    if (lixeira03 == 0){
+      if (lixeira04 == 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 == 0){
+    if (lixeira03 == 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira05)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 == 0){
+    if (lixeira03 == 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira04 + lixeira05)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 == 0){
+    if (lixeira03 == 0){
+      if (lixeira04 > 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira04)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02== 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira03 + lixeira05)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 == 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira05 + lixeira03 + lixeira04)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 == 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira03 + lixeira04)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 == 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira03)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira03 + lixeira04)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira03 + lixeira04 + lixeira05)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 > 0){
+    if (lixeira03 == 0){
+      if (lixeira04 > 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira04)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira02 + lixeira03 + lixeira04 + lixeira05)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 == 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira03 + lixeira05)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 == 0){
+    if (lixeira03 == 0){
+      if (lixeira04 > 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira04)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 == 0){
+    if (lixeira03 == 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira04 + lixeira05)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 == 0){
+    if (lixeira03 == 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira05)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 == 0){
+      if (lixeira04 > 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira02 + lixeira04)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira02 + lixeira03)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 == 0){
+      if (lixeira04 == 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira01)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 == 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira03 + lixeira04 + lixeira05)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira03 + lixeira02 + lixeira05)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 == 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira02 + lixeira04 + lixeira05)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira03 + lixeira05)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira03 + lixeira05 + lixeira01)* calculo 
+        total1.innerHTML = `seu total é R$${total.toFixed(2)} (Sem Manutenção)`}
+      }
+    }
+  }
+}
+
+var soma = total*0.9;
+
+mit2.innerHTML += `<br> Obrigado por confiar na MIT! <br>
+<u class = "tag_u">O Total de sua compra é R$${soma.toFixed(2)} com 10% de desconto.</u> <br> 5% do total de sua compra será doado,<br> pois quando você trabalha com a MIT, você está reciclando oportunidade. `
+
+
+
+
+
+}
+function não(){
+  mit2.innerHTML = '';
+  mit.innerHTML = '';
+  var tempo1 = Number(tempo.value)
+  var calculo = tempo1 *50
+  var total;
+  var lixeira01 = Number(lixeira1.value)
+  var lixeira02 = Number(lixeira2.value)
+  var lixeira03 = Number(lixeira3.value)
+  var lixeira04 = Number(lixeira4.value)
+  var lixeira05 = Number(lixeira5.value)
+if (lixeira01 > 0){
+  if (lixeira02 == 0){
+    if (lixeira03 == 0){
+      if (lixeira04 == 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira02 + lixeira03 + lixeira04)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira02 + lixeira03 + lixeira04 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 == 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira02 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 == 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira03 + lixeira04)* calculo 
+       }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 == 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira03)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 > 0){
+    if (lixeira03 == 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira04 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira03)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 > 0){
+    if (lixeira03 == 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 > 0){
+    if (lixeira03 == 0){
+      if (lixeira04 == 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 == 0){
+    if (lixeira03 == 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 == 0){
+    if (lixeira03 == 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira04 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 == 0){
+    if (lixeira03 == 0){
+      if (lixeira04 > 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira04)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02== 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira03 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 == 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira05 + lixeira03 + lixeira04)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 == 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira03 + lixeira04)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 == 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira03)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira03 + lixeira04)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira03 + lixeira04 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 > 0){
+    if (lixeira03 == 0){
+      if (lixeira04 > 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira04)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira02 + lixeira03 + lixeira04 + lixeira05)* calculo 
+       }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 == 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira03 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 == 0){
+    if (lixeira03 == 0){
+      if (lixeira04 > 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira04)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 == 0){
+    if (lixeira03 == 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira04 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 == 0){
+    if (lixeira03 == 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 == 0){
+      if (lixeira04 > 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira02 + lixeira04)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira02 + lixeira03)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 == 0){
+      if (lixeira04 == 0){
+        if (lixeira05 == 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira01)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 == 0){
+    if (lixeira03 > 0){
+      if (lixeira04 > 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira03 + lixeira04 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 > 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira01 + lixeira03 + lixeira02 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+if (lixeira01 == 0){
+  if (lixeira02 > 0){
+    if (lixeira03 > 0){
+      if (lixeira04 == 0){
+        if (lixeira05 > 0) { 
+          total1.innerHTML = '';
+          var total = (lixeira02 + lixeira03 + lixeira05)* calculo 
+        }
+      }
+    }
+  }
+}
+
+
+
+total1.innerHTML = `O Valor total de sua compra é R$${total.toFixed(2)}`
+}
+
+</script>

@@ -1,0 +1,131 @@
+.borda {
+  width: 1100px;
+  height: 100px;
+  border-color: green;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 50px;
+  background-image: url('logo2.png');
+  background-repeat: no-repeat;
+  background-size: 100px;
+  text-align: center;
+  }
+.lixeira01 {
+  width: 200px;
+  height: 230px;
+  border-color: green;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 30px;
+  float: left;
+  background-position: right 100px;
+}
+.input1 {
+  border-radius: 30px;
+  border-color: green;
+  text-align: center;
+}
+.lixeira02 {
+  width: 200px;
+  height: 230px;
+  border-color: blue;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 30px;
+  float: left;
+  
+}
+.input2 {
+  border-radius: 30px;
+  border-color: blue;
+  text-align: center;
+}
+.lixeira03 {
+  width: 200px;
+  height: 230px;
+  border-color: red;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 30px;
+  float: left;
+  
+}
+.input3 {
+  border-radius: 30px;
+  border-color: red;
+  text-align: center;
+}
+.lixeira04 {
+  width: 200px;
+  height: 230px;
+  border-color: yellow;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 30px;
+  float: left;
+  
+}
+.input4 {
+  border-radius: 30px;
+  border-color: yellow;
+  text-align: center;
+}
+.lixeira05 {
+  width: 200px;
+  height: 230px;
+  border-color: rgb(59, 47, 42);
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 30px;
+  float: left;
+  
+}
+.input5 {
+  border-radius: 30px;
+  border-color:rgb(59, 47, 42);
+  text-align: center;
+}
+.input6{
+  border-radius: 30px;
+  border-color: green;
+  text-align: center;
+}
+.texto{
+  float: left;
+  margin-top: 10px;
+  width: 800px;
+  border-color: green;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 30px
+}
+.geral{
+  float: left;
+  margin-top: 10px
+}
+.pronto {
+  border-radius: 30px;
+}
+.button_sim{
+  border-radius: 30px;
+}
+.button_nao {
+  border-radius: 30px;
+}
+.background{
+  background-image: url('fundo.jpeg');
+  background-size: cover;
+  height: 100vh;
+  width: 100%
+}
+.blur{
+  backdrop-filter: blur(5px);
+  height: 100vh;
+  width: 100%;
+  
+}
+body {
+  margin:0;
+  padding:0;
+  border:0;
+}
